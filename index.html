@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1 class="title">Image Gallery</h1>
+
+    <div class="filter-buttons">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('architecture')">Architecture</button>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item nature">
+            <img src="natureimg.jpg" alt="Nature 1" onclick="openLightbox(0)">
+        </div>
+        <div class="gallery-item architecture">
+            <img src="images arc1.jpeg" alt="Architecture 1" onclick="openLightbox(1)">
+        </div>
+        <div class="gallery-item nature">
+            <img src="img 2.jpeg" alt="Nature 2" onclick="openLightbox(2)">
+        </div>
+        <div class="gallery-item architecture">
+            <img src="acr 2.jpg" alt="Architecture 2" onclick="openLightbox(3)">
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="">
+        <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
